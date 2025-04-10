@@ -2,9 +2,11 @@
 
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize any components that need JavaScript
+    // Initialize all components that need JavaScript
     initNavbarScroll();
     initScrollAnimation();
+    initNavActive();
+    initFooterLinks();
     
     // Form validation for contact form
     const contactForm = document.getElementById('contactForm');
@@ -45,6 +47,48 @@ function initScrollAnimation() {
             observer.observe(element);
         });
     }
+}
+
+// Set active navigation item based on current page
+function initNavActive() {
+    // Get current page path
+    const currentPath = window.location.pathname;
+    const pageName = currentPath.split('/').pop();
+    
+    // Select all navigation links
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    
+    // Remove any existing active classes
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        
+        // Get the href attribute
+        const href = link.getAttribute('href');
+        
+        // If the href matches the current page, add active class
+        if (href === pageName || 
+            (pageName === '' && href === 'index.html') || 
+            (pageName === '/' && href === 'index.html')) {
+            link.classList.add('active');
+        }
+    });
+}
+
+// Initialize footer link functionality
+function initFooterLinks() {
+    // Get all footer links
+    const footerLinks = document.querySelectorAll('.footer-links a');
+    
+    // Add hover effect and transition
+    footerLinks.forEach(link => {
+        link.addEventListener('mouseenter', function() {
+            this.style.color = 'var(--light-blue)';
+        });
+        
+        link.addEventListener('mouseleave', function() {
+            this.style.color = '';
+        });
+    });
 }
 
 // Contact form validation

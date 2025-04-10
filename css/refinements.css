@@ -1,0 +1,273 @@
+/* Design refinements for Offshore Marine Website
+   Implements improved spacing, minimalist design principles,
+   and visual consistency across the site */
+
+/* Global spacing improvements */
+.section-padding {
+    padding: 4rem 0;
+}
+
+.section-padding-lg {
+    padding: 6rem 0;
+}
+
+/* Increased whitespace between elements */
+.section-heading {
+    margin-bottom: 3rem;
+}
+
+.mb-spacing {
+    margin-bottom: 2.5rem;
+}
+
+.mt-spacing {
+    margin-top: 2.5rem;
+}
+
+/* Card refinements */
+.card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Partner card improvements */
+.partner-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+}
+
+.partner-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 24px rgba(0, 48, 87, 0.15);
+}
+
+/* Button refinements */
+.btn {
+    border-radius: 6px;
+    padding: 0.6rem 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+.btn-primary, .btn-light {
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #002c54;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 48, 87, 0.2);
+}
+
+.btn-light:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Typography improvements */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1.2rem;
+}
+
+p {
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+/* List spacing */
+ul, ol {
+    padding-left: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Container spacing for better readability */
+@media (min-width: 992px) {
+    .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+/* Image container improvements */
+.image-container {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Header and Footer standardization with light blue highlights */
+
+/* Navbar refinements */
+header {
+    background-color: var(--primary-blue);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-scrolled {
+    padding: 10px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+    max-height: 50px;
+}
+
+/* Standardized links styling with light blue highlights */
+.nav-link {
+    color: var(--white) !important;
+    font-weight: 500;
+    padding: 10px 15px !important;
+    margin: 0 5px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #e1f5fe !important; /* Explicit light blue color */
+}
+
+/* Underline animation effect for navbar links */
+.nav-link:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #e1f5fe; /* Explicit light blue color */
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover:after, .nav-link.active:after {
+    width: 100%;
+}
+
+/* Add specific class for active navigation */
+.nav-link.active {
+    font-weight: 600;
+    position: relative;
+}
+
+.nav-link.active:after {
+    width: 100%;
+    height: 2px;
+    background-color: #e1f5fe; /* Explicit light blue color */
+}
+
+/* Footer refinements */
+.footer {
+    background-color: var(--accent-blue);
+    color: var(--white);
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+.footer-links a {
+    color: #ffffff;
+    margin-bottom: 10px;
+    position: relative;
+    transition: color 0.3s ease;
+    display: inline-block;
+    padding: 3px 0;
+}
+
+.footer-links a:hover {
+    color: #e1f5fe; /* Explicit light blue color */
+    text-decoration: none;
+}
+
+/* Underline animation effect for footer links */
+.footer-links a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #e1f5fe; /* Explicit light blue color */
+    transition: width 0.3s ease;
+}
+
+.footer-links a:hover:after {
+    width: 100%;
+}
+
+/* Social media icons in footer */
+.social-icons a {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.social-icons a:hover {
+    color: #e1f5fe; /* Explicit light blue color */
+    transform: translateY(-3px);
+}
+
+/* CTA section improvements */
+.cta-section {
+    position: relative;
+    padding: 5rem 0;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0, 48, 87, 0.9), rgba(0, 86, 179, 0.8));
+    z-index: -1;
+}
+
+/* Form field improvements */
+.form-control {
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    border: 1px solid #dee2e6;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 48, 87, 0.25);
+}
+
+/* Table refinements */
+.table {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Breadcrumb refinements */
+.breadcrumb {
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+
+/* Adding smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}

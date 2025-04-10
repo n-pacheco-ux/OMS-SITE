@@ -1,3 +1,12 @@
+/*
+ * CACHE BUSTER - DISABLED FOR PRODUCTION USE
+ * This file was used during development to prevent browser caching issues
+ * It has been disabled as part of the Phase 1 completion and Phase 2 preparation
+ * Kept for reference purposes only
+ * Last active: April 2025
+ */
+
+/*
 document.addEventListener('DOMContentLoaded', function() {
     // Add timestamp to image sources for cache busting
     const timestamp = new Date().getTime();
@@ -29,3 +38,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+*/

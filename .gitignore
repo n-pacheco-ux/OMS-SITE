@@ -28,3 +28,7 @@ out/
 *.tmp
 *.swp
 *.swo
+
+# Documentation
+deployment-guide.md
+memory-bank/
